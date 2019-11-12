@@ -2,13 +2,8 @@
 <br>
 <br>
 <% @tasks.each do |task| %>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-    <label class="form-check-label" for="defaultCheck1">
-      <%= link_to task.title, task_path(task) %>
-      <!-- <%= task.completed %> -->
-    </label>
-  </div>
+  <h2><%= link_to task.title, task_path(task) %></h2>
+  <p><%= task.completed %></p>
 <% end %>
 
-<%= link_to 'Add new task', new_path %>
+<p><%= link_to 'Add new task', new_path %></p>
